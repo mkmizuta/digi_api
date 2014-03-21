@@ -21,4 +21,10 @@ class ItemsController < ApplicationController
     @item.save
     render :index
   end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    render :index
+  end
 end
