@@ -11,7 +11,8 @@ DigiApi::Application.routes.draw do
     post '/items', to: 'items#create'
     get '/items', to: 'items#index'
     put '/items/:id', to: 'items#update'
-    delete 'items/:id', to: 'items#destroy'
+    delete '/items/:id', to: 'items#destroy'
+    post '/orders', to: 'orders#create'
   end
 
   # defaults format: :json do
