@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params.require(:product).permit(:name, :price, :image, :avatar, :description))
     if @product.save
-      render "show", status: :created
+      render "show"
     else
 
     end
